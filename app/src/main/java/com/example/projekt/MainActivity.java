@@ -5,9 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +48,53 @@ public class MainActivity extends AppCompatActivity {
         };
         Spinner spinner=findViewById(R.id.spinner2);
         spinner.setOnItemSelectedListener(wybranyElement2);
+
+        ArrayList<String> planszowki = new ArrayList<>();
+        planszowki.add("cyklady");
+        planszowki.add("Satorini");
+        planszowki.add("Szachy");
+        planszowki.add("Uno");
+        planszowki.add("Sonar");
+        planszowki.add("Remik");
+
+
+        ArrayAdapter<String> adapterPlanszowki= new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_list_item_1,
+                planszowki
+        );
+
+        ListView listViewPlanszowki=findViewById(R.id.ListViewPlanszowki);
+        listViewPlanszowki.setAdapter(adapterPlanszowki);
+
+ listViewPlanszowki.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+     @Override
+     public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+         planszowki.remove(i);
+         adapterPlanszowki.notifyDataSetChanged();
+     }
+ });
+
+ AdapterView.OnItemClickListener wpisano=new AdapterView.OnItemClickListener() {
+     @Override
+     public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+
+
+     }
+ };
+
+ Button button=findViewById(R.id.buttonDodaj);
+ button.setOnClickListener(new View.OnClickListener() {
+     @Override
+     public void onClick(View v) {
+         EditText editText= findViewById(R.id.editTextPlanszowka);
+         planszowki.add(editText.getText().toString());
+         adapterPlanszowki.notifyDataSetChanged();
+     }
+ });
+
+
+
 
 
     }

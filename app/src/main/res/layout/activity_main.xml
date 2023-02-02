@@ -38,4 +38,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wszystkie planszówki"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner2"
+        />
+
+    <ListView
+        android:id="@+id/ListViewPlanszowki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner2"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPlanszowka"
+        />
+
+    <EditText
+        android:id="@+id/editTextPlanszowka"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:inputType="textPersonName"
+        android:hint="dodaj nowa planszowke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDodaj"
+        app:layout_constraintTop_toBottomOf="@id/ListViewPlanszowki"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/buttonDodaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dodaj"
+        app:layout_constraintStart_toEndOf="@id/editTextPlanszowka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
