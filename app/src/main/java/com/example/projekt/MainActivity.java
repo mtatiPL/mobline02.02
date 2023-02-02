@@ -93,8 +93,10 @@ public class MainActivity extends AppCompatActivity {
      }
  });
 
-new planszowka("uno",2,4,"karciane",10,"trudne");
 
+
+planszowka gra = new planszowka("Chińczyk",2,4,4,10,"trudne");
+planszowki.add(gra.getNazwa());
 
 
 

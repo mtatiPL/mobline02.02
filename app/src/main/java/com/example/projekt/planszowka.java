@@ -1,15 +1,14 @@
 package com.example.projekt;
 
 public class planszowka {
-   private String nazwa;
-    private Integer MiniloscGraczy;
-    private Integer MaxiloscGraczy;
-    private  String kategoria;
-    private  Integer czasGry;
-    private String trudnosc;
+ private String nazwa;
+ private Integer MiniloscGraczy;
+ private Integer MaxiloscGraczy;
+ private Integer kategoria;
+ private Integer czasGry;
+ private String trudnosc;
 
-
- public planszowka(String nazwa, Integer miniloscGraczy, Integer maxiloscGraczy, String kategoria, Integer czasGry, String trudnosc) {
+ public planszowka(String nazwa, Integer miniloscGraczy, Integer maxiloscGraczy, Integer kategoria, Integer czasGry, String trudnosc) {
   this.nazwa = nazwa;
   MiniloscGraczy = miniloscGraczy;
   MaxiloscGraczy = maxiloscGraczy;
@@ -42,11 +41,11 @@ public class planszowka {
   MaxiloscGraczy = maxiloscGraczy;
  }
 
- public String getKategoria() {
+ public Integer getKategoria() {
   return kategoria;
  }
 
- public void setKategoria(String kategoria) {
+ public void setKategoria(Integer kategoria) {
   this.kategoria = kategoria;
  }
 
