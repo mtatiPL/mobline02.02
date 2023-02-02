@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
      }
  });
 
+new planszowka("uno",2,4,"karciane",10,"trudne");
+
 
 
 
