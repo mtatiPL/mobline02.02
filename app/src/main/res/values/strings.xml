@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">projekt</string>
+    <string-array name="kategorie">
+        <item>logiczne</item>
+        <item>strategiczne</item>
+        <item>Bitewne</item>
+        <item>ekonomiczne</item>
+        <item>familijne</item>
+        <item>karciane</item>
+
+    </string-array>
 </resources>
